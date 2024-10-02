@@ -1,0 +1,161 @@
+:root {
+	--base: #2e231e;
+	--text: #e0d4af;
+    --text1: #d2bea1;
+    --green: #7b9871;
+    --green1: #bccb90;
+    --green2: #a8b974;
+    --crust: #241610;
+	color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--base: #e0d4af;
+	    --text: #2f1a11;
+        --text1: #583727;
+        --green: #3e5e33;
+        --green1: #727d25;
+        --green2: #67811b;
+        --crust: #d1c2a1;
+		color-scheme: light;
+	}
+}
+
+:root,
+code {
+	font-family: "Hack", "Hack Nerd Font", "JetBrains Mono", "JetBrainsMono Nerd Font", monospace,
+		sans-serif;
+}
+
+:root {
+	scrollbar-width: none;
+	background-color: var(--base);
+	color: var(--text1);
+	accent-color: var(--green);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--base);
+}
+
+main {
+	padding: 1em;
+	background-color: var(--base);
+}
+
+p, fieldset, ul {
+    line-height: 1.5em;
+}
+
+a {
+    color: var(--green);
+}
+
+a:hover {
+    color: var(--green1);
+}
+
+a:visited {
+    color: var(--green2);
+}
+
+strong, h1, h2, legend, td:first-child {
+    color: var(--text);
+}
+
+details[open] summary {
+    margin-bottom:1em;
+}
+
+details summary {
+    cursor:pointer;
+}
+
+details[open] {
+    cursor:text;
+}
+
+summary::after {
+	content: " (click to expand)";
+	opacity: 50%;
+	font-size: smaller;
+	font-weight: lighter;
+}
+
+details[open] > summary::after {
+	content: " (click to collapse)";
+}
+
+fieldset {
+    margin-bottom: 1.5em;
+	border-color: var(--text);
+}
+
+legend {
+	font-weight: 900;
+}
+
+table {
+    border-spacing:0 .5em;
+}
+
+td:first-child {
+	font-weight: bold;
+	word-break: keep-all;
+	vertical-align: top;
+}
+
+td:nth-child(2) {
+	padding-left: 1.5em;
+	word-break:break-word;
+}
+
+
+footer {
+	text-align: end;
+	font-size: small;
+	opacity: 50%;
+}
+
+br { display: block; content: ""; margin-bottom: .5em; }
+
+@media (min-width: 956px) {
+	:root {
+        --target-ratio: 0.7; /* 669px - 1344x */
+		--width: min(100% * var(--target-ratio), 1920px * var(--target-ratio));
+		--padding: 2em;
+		--padded-width: calc(var(--width) - var(--padding) * 2);
+	}
+
+	body {
+		padding: 4em ;
+		min-height: calc(100vh - 8em);
+		background: var(--crust);
+		background: linear-gradient(
+			90deg,
+			var(--base) 0%,
+			var(--crust) calc((100% - var(--width)) / 2),
+			var(--crust) calc(50% + var(--width) / 2),
+			var(--base) 100%
+		);
+	}
+
+	body > * {
+		margin: auto;
+		padding: var(--padding);
+		width: var(--padded-width);
+	}
+
+    body > footer {
+        padding:initial;
+        width: var(--width);
+    }
+
+    footer {
+        padding:1em !important;
+    }
+
+}
