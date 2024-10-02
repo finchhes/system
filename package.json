@@ -2,9 +2,6 @@
   "name": "system",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "deploy": "surge --project /Users/sebs/sys --domain louvres.surge.sh"
-  },
   "author": "",
   "license": "ISC",
   "description": "",
@@ -12,10 +9,9 @@
     "git-scripts": "^0.6.4",
     "surge": "^0.24.6"
   },
- "git": {
+"git": {
   "scripts": {
-    "post-commit": "npm run deploy",
-    "pre-push": "npm run deploy"
+    "pre-push": "surge --project ./sys --domain louvres.surge.sh"
   }
 }
 }
