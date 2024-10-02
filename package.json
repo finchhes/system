@@ -12,7 +12,7 @@
   },
   "git": {
     "scripts": {
-      "pre-push": "surge --project ./sys --domain louvres.surge.sh"
+      "pre-push": "surge --project /Users/sebs/sys --domain louvres.surge.sh"
     }
   }
 }
