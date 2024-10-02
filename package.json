@@ -7,11 +7,12 @@
   "description": "",
   "devDependencies": {
     "git-scripts": "^0.6.4",
+    "husky": "^9.1.6",
     "surge": "^0.24.6"
   },
-"git": {
-  "scripts": {
-    "pre-push": "surge --project ./sys --domain louvres.surge.sh"
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project ./sys --domain louvres.surge.sh"
+    }
   }
-}
 }
