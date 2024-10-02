@@ -12,10 +12,8 @@
     "git-scripts": "^0.6.4",
     "surge": "^0.24.6"
   },
-  "git": {
-    "scripts": {
-      "post-commit": "npm run deploy",
-      "pre-push": "npm run deploy"
-    }
+ "git": {
+  "scripts": {
+    "pre-push": "surge --project ./sys --domain louvres.surge.sh"
   }
 }
