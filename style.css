@@ -37,7 +37,9 @@ code {
 
 body {
 	margin: 0;
-	padding: 0;
+	padding:0;
+	padding-top:2em;
+	padding-bottom:2em;
 	background-color: var(--base);
 }
 
@@ -118,6 +120,7 @@ footer {
 	text-align: end;
 	font-size: small;
 	opacity: 50%;
+	padding-right:1em;
 }
 
 br { display: block; content: ""; margin-bottom: .5em; }
