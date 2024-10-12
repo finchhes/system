@@ -22,6 +22,10 @@
 	}
 }
 
+* {
+	box-sizing:content-box;
+}
+
 :root,
 code {
 	font-family: "Hack", "Hack Nerd Font", "JetBrains Mono", "JetBrainsMono Nerd Font", monospace,
