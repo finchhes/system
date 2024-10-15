@@ -135,12 +135,6 @@ br { display: block; content: ""; margin-bottom: .5em; }
 	flex-wrap:wrap;
 	gap:10px;
 	flex-direction:column;
-	border-top:2px solid;
-	padding-top:10px;
-}
-	
-.frntr:last-child {
-	  border-bottom: none;
 }
 
 .frntr {
@@ -152,8 +146,11 @@ br { display: block; content: ""; margin-bottom: .5em; }
 .frntr + .frntr {
 	border-top:2px solid;
 	padding-top:10px;
-	border-bottom:2px solid;
-	padding-bottom:10px;
+}
+
+#spfronters::last-child {
+	border-bottom: none !important;
+	border-top:none !important;
 }
 
 .fpfp {
