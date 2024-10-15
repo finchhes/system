@@ -98,6 +98,7 @@ details[open] > summary::after {
 fieldset {
     margin-bottom: 1.5em;
 	border-color: var(--text);
+	border-style:solid;
 }
 
 legend {
@@ -128,6 +129,36 @@ footer {
 }
 
 br { display: block; content: ""; margin-bottom: .5em; }
+
+#spfronters {
+	display:flex;
+	flex-wrap:wrap;
+	gap:10px;
+	flex-direction:column;
+	border-top:2px solid;
+	padding-top:10px;
+}
+	
+.mcont:last-child {
+	  border-bottom: none;
+}
+
+.mcont {
+	display:flex;
+	gap:10px;
+	align-items: center;
+}
+
+.mcont + .mcont {
+	border-top:2px solid;
+	padding-top:10px;
+	border-bottom:2px solid;
+	padding-bottom:10px;
+}
+
+.favi {
+	height:50px;
+}
 
 @media (min-width: 956px) {
 	:root {
