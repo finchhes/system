@@ -1,6 +1,5 @@
-//simple js code to display your current sp fronters on a website where <div id="spfronters"></div> is located
-//this does not include custom fronts because im lazy and dont want to code that. this also does not list them in alphabetical order, its random everytime
-//profile pictures have to be uploaded outside of simply plural for them to be shown. feel free to use ".favi {display:none;}" in your stylesheet to hide them or edit the html output directly
+//this does not include custom fronts because im lazy and dont want to code that.
+//profile pictures have to be uploaded outside of simply plural for them to be shown. feel free to use ".fpfp {display:none;}" in your stylesheet to hide them or edit the html output directly
 
 var fronters;
 var frontMembers = [];
@@ -38,19 +37,22 @@ function getMembersData(uid, member){
 }
 
 function storeFronters(){
-    console.log(this)
+    console.log(this);
     frontMembers.push(JSON.parse(this.responseText));
+
+    frontMembers.sort((a, b) => a.content.name.localeCompare(b.content.name));
+
     makeFronterElements(document.getElementById("spfronters"));
 }
 
 function makeFronterElements(imbed) {
     imbed.innerHTML = '';
-    for (let i = 0; i < Object.keys(fronters).length; i++) {
-        imbed.innerHTML += '<div class="frntr" "&' + frontMembers[i].content.name + '"><img class="fpfp" src="' + frontMembers[i].content.avatarUrl + '"><div class="nameprn"><div class="fname">' + frontMembers[i].content.name + '</div><div class=fprn>' + frontMembers[i].content.pronouns + '</div></div></div>'
-        console.log(i)
-        console.log(imbed.innerHTML)
+    for (let i = 0; i < frontMembers.length; i++) {
+        imbed.innerHTML += '<div class="frntr" "&' + frontMembers[i].content.name + '"><img class="fpfp" src="' + frontMembers[i].content.avatarUrl + '"><div class="nameprn"><div class="fname">' + frontMembers[i].content.name + '</div><div class="fprn">' + frontMembers[i].content.pronouns + '</div></div></div>';
+        console.log(i);
+        console.log(imbed.innerHTML);
     }
-    console.log("makingem")
+    console.log("makingem");
 }
 
 getFronters();
