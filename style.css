@@ -139,24 +139,24 @@ br { display: block; content: ""; margin-bottom: .5em; }
 	padding-top:10px;
 }
 	
-.mcont:last-child {
+.frntr:last-child {
 	  border-bottom: none;
 }
 
-.mcont {
+.frntr {
 	display:flex;
 	gap:10px;
 	align-items: center;
 }
 
-.mcont + .mcont {
+.frntr + .frntr {
 	border-top:2px solid;
 	padding-top:10px;
 	border-bottom:2px solid;
 	padding-bottom:10px;
 }
 
-.favi {
+.fpfp {
 	height:50px;
 }
 
