@@ -1,6 +1,3 @@
-//this does not include custom fronts because im lazy and dont want to code that.
-//profile pictures have to be uploaded outside of simply plural for them to be shown. feel free to use ".fpfp {display:none;}" in your stylesheet to hide them or edit the html output directly
-
 var fronters;
 var frontMembers = [];
 var imbed;
@@ -52,7 +49,6 @@ function makeFronterElements(imbed) {
         console.log(i);
         console.log(imbed.innerHTML);
     }
-    console.log("makingem");
 }
 
 getFronters();
