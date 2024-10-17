@@ -120,7 +120,6 @@ td:nth-child(2) {
 	word-break:break-word;
 }
 
-
 footer {
 	text-align: end;
 	font-size: small;
@@ -155,6 +154,20 @@ br { display: block; content: ""; margin-bottom: .5em; }
 
 .fpfp {
 	height:50px;
+}
+
+hr {
+	border:1px solid var(--text1);
+}
+
+.catpics {
+	height:200px;
+	width:200px;
+	object-fit:cover;
+}
+
+figure {
+	text-align:center;
 }
 
 @media (min-width: 956px) {
